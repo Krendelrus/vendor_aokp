@@ -25,6 +25,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
     vendor/aokp/prebuilt/common/app/Superuser.apk:system/app/Superuser.apk \
     vendor/aokp/prebuilt/common/app/LatinImeDictionaryPack.apk:system/app/LatinImeDictionaryPack.apk \
+    vendor/aokp/prebuilt/common/app/FileManager-1.2.apk:/system/app/FileManager-1.2.apk \
     vendor/aokp/prebuilt/common/etc/resolv.conf:system/etc/resolv.conf
     
 # init.d

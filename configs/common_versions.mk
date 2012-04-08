@@ -1,7 +1,7 @@
 # Version information used on all builds
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=IMM76D BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_UTC_DATE=$(shell date +"%s")
 
-CURRENT_VERSION=-CURRENT_VERSION=$(TARGET_PRODUCT)_build-30-$(shell date +"%Y%m%d")
+CURRENT_VERSION=-CURRENT_VERSION=$(TARGET_PRODUCT)_build-30-$(shell date +"%d%m%Y")
 
 ifneq ($(TARGET_PRODUCT),aokp_p999)
     ifeq ($(TARGET_PRODUCT),aokp_p990)

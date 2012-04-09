@@ -19,16 +19,21 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.locationfeatures=1 \
     ro.setupwizard.enterprise_mode=1 \
     windowsmgr.max_events_per_sec=240 \
+    ro.sf.lcd_density=200 \
+    ro.com.android.dateformat=dd-MM-yyyy \
+    ro.config.notification_sound=F1_New_SMS.ogg \
+    ro.config.alarm_alert=Good_Morning.ogg \
     ro.kernel.android.checkjni=0
 
 # Blobs common to all devices
 PRODUCT_COPY_FILES += \
     vendor/aokp/prebuilt/common/app/Superuser.apk:system/app/Superuser.apk \
     vendor/aokp/prebuilt/common/app/LatinImeDictionaryPack.apk:system/app/LatinImeDictionaryPack.apk \
-    vendor/aokp/prebuilt/common/app/FileManager-1.2.apk:/system/app/FileManager-1.2.apk \
+    vendor/aokp/prebuilt/common/app/FileManager-1.2.apk:system/app/FileManager-1.2.apk \
+    vendor/aokp/prebuilt/common/app/UMS.apk:system/app/UMS.apk \
     vendor/aokp/prebuilt/common/etc/resolv.conf:system/etc/resolv.conf
     
-# init.d
+# init.d and other tweaks
 PRODUCT_COPY_FILES += \
     vendor/aokp/prebuilt/common/etc/init.d/00check:system/etc/init.d/00check \
     vendor/aokp/prebuilt/common/etc/init.d/01zipalign:system/etc/init.d/01zipalign \
@@ -42,7 +47,9 @@ PRODUCT_COPY_FILES += \
     vendor/aokp/prebuilt/common/etc/init.d/98tweaks:system/etc/init.d/98tweaks \
     vendor/aokp/prebuilt/common/etc/init_trigger.disabled:system/etc/init_trigger.disabled \
     vendor/aokp/prebuilt/common/etc/liberty.bsh:system/etc/liberty.bsh \
-    vendor/aokp/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf
+    vendor/aokp/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf \
+    vendor/aokp/prebuilt/common/etc/gps.conf:system/etc/gps.conf \
+    vendor/aokp/prebuilt/common/etc/hosts:system/etc/hosts
     
 # Cron
 PRODUCT_COPY_FILES += \
@@ -52,7 +59,11 @@ PRODUCT_COPY_FILES += \
     vendor/aokp/prebuilt/common/etc/cron/cron.weekly/00drop_caches:system/etc/cron/cron.weekly/00drop_caches \
     vendor/aokp/prebuilt/common/etc/cron/cron.hourly/01clear_cache:system/etc/cron/cron.hourly/01clear_cache \
     vendor/aokp/prebuilt/common/etc/cron/cron.daily/01clear_cache:system/etc/cron/cron.daily/01clear_cache \
-    vendor/aokp/prebuilt/common/etc/cron/cron.weekly/01clear_cache:system/etc/cron/cron.weekly/01clear_cache 
+    vendor/aokp/prebuilt/common/etc/cron/cron.weekly/01clear_cache:system/etc/cron/cron.weekly/01clear_cache
+
+# Media files
+PRODUCT_COPY_FILES += \
+    vendor/aokp/prebuilt/common/media/audio/alarms/Good_Morning.ogg:system/media/audio/alarms/Good_Morning.ogg
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \

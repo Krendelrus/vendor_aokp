@@ -19,10 +19,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.locationfeatures=1 \
     ro.setupwizard.enterprise_mode=1 \
     windowsmgr.max_events_per_sec=240 \
-    ro.sf.lcd_density=200 \
-    ro.com.android.dateformat=dd-MM-yyyy \
-    ro.config.notification_sound=F1_New_SMS.ogg \
-    ro.config.alarm_alert=Good_Morning.ogg \
     ro.kernel.android.checkjni=0
 
 # Blobs common to all devices
